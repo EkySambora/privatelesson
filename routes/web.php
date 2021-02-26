@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -15,9 +16,10 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+    // return view('welcome');
+// });
 
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
