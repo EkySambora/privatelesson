@@ -23,3 +23,6 @@ Route::get('/', function () {
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 // Route::get('/', [HomeController::class, 'index']);
+Route::get('/task', function(){
+    return view('task');
+}); 
